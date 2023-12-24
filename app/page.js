@@ -10,7 +10,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-neutral-300 w-full h-[500px]">
+      <div className="bg-neutral-300 w-full h-[500px] px-3 pt-1">
 
       </div>
     </div>
