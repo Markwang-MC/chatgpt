@@ -17,3 +17,8 @@ export default function Home() {
     </div>
   )
 }
+
+
+// git add .
+// git commit -m update
+// git push github master:main
