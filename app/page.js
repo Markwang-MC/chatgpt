@@ -4,7 +4,7 @@ export default function Home() {
   const [about, setAbout] = useState(false);
   return (
     <div className="bg-white">
-      
+      hello
     </div>
   )
 }
