@@ -1,11 +1,12 @@
 // import Image from 'next/image'
-
+import {useState,useEffect} from "react"
 export default function Home() {
+  const [about, setAbout] = useState(false);
   return (
     <div className="bg-white">
       <div className="w-full h-[75px] bg-amber-300 flex items-center justify-end rounded">
         <div className="mr-[50px]">
-          <span className="mr-[50px]">占位符</span>
+          <span className="mr-[50px]" onClick={setAbout(!about)}>about</span>
           <span>占位符</span>
         </div>
       </div>
