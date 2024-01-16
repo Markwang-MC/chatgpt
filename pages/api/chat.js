@@ -1,14 +1,13 @@
 import openai from 'openai';
 export default function handler(req, res) {
   if (req.method=="POST") {
-    console.log(req.body);
+    console.log('req.body');
   }
 
   const generateText = async (prompt) => {
     const response = await openai.Completion.create({
       engine: 'text-davinci-003',
       prompt: prompt,
-      maxTokens: 100
     });
 
     return response.choices[0].text;
