@@ -1,5 +1,6 @@
 import openai from 'openai';
 export default function handler(req, res) {
+  console.log(req.url);
   if (req.method=="POST") {
     console.log('req.body');
   }
