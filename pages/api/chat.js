@@ -4,11 +4,23 @@ export default function handler(req, res) {
     console.log(req.body);
   }
 
-  const response = await openai.Completion.create({
-    engine: 'davinci',
-    prompt: 'Once upon a time',
-    max_tokens: 5
+  const generateText = async (prompt) => {
+    const response = await openai.Completion.create({
+      engine: 'text-davinci-003',
+      prompt: prompt,
+      maxTokens: 100
+    });
+
+    return response.choices[0].text;
+  };
+
+  generateText('Once upon a time').then(text => {
+    console.log(text);
+  }).catch(error => {
+    console.error('Error:', error);
   });
+
+
   res.status(200).json({x:1})
   // res.end("")
 }
