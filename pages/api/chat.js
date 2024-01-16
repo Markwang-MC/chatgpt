@@ -1,6 +1,5 @@
 import openai from 'openai';
 export default function handler(req, res) {
-  console.log(req.url);
   if (req.method=="POST") {
     console.log('req.body');
   }
@@ -15,7 +14,7 @@ export default function handler(req, res) {
   };
 
   generateText('Once upon a time').then(text => {
-    console.log(text);
+    console.log({text});
   }).catch(error => {
     console.error('Error:', error);
   });
