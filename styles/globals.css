@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+
+#container::before{
+  content: "";
+  width: 2px;
+  height: 100%;
+  top: 0px;
+  position:absolute;
+  background-color: black;
+  z-index: -1;
+  left: 50%;
+}
+
+#part_one{
+  position: absolute;
+}
+
+.wow-left{
+  opacity: 0;
+  transition: opacity 2s ease,transform 2s ease;
+}
+
+.wow-right{
+  opacity: 0;
+  transition: opacity 2s ease,transform 2s ease;
+}
+
+.right-visibal{
+  transform: translateX(-20%);
+  opacity: 1
+}
+
+.left-visibal{
+  transform: translateX(+10%);
+  opacity: 1
+}
+
+.big_Photo_left{
+  opacity: 0;
+  transition: opacity 2s ease,transform 2s ease;
+}
+
+.big_Photo_right{
+  opacity: 0;
+  transition: opacity 2s ease,transform 2s ease;
+}
+
+.big_Photo_right_visibal{
+  opacity: 1;
+  /* transform: translateX(+10%); */
+}
+
+.big_Photo_left_visibal{
+  opacity: 1;
+  /* transform: translateX(+10%); */
+}
