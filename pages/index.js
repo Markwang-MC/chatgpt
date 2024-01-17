@@ -7,14 +7,10 @@ export default function Index() {
     text: prompt
   })
   .then((res)=>{
+    console.log(res);
     return res.data.chatCompletion
   })
-  .then((res)=>{
-    return res;
-  })
-  .then((data)=>{
-    console.log(data);
-  })
+
   .catch(error => {
     // 处理错误
     // console.log({error});
