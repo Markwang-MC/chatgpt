@@ -4,18 +4,19 @@ export default function handler(req, res) {
     console.log('req.body');
   }
 
-  response = openai.Completion.create(
-  engine="davinci-codex",
-  prompt="What is the meaning of life?",
-  max_tokens=50,
-  temperature=0.7,
-  n=1,
-  stop=None,
-  echo=True
-)
-console.log(response);
-reply = response.choices[0].text.strip()
-print('ChatGPT Reply:', reply)
+  const openai = new OpenAI({
+    apiKey: process.env['OPENAI_API_KEY'], // This is the default and can be omitted
+  });
+
+  async function main() {
+    const chatCompletion = await openai.chat.completions.create({
+      messages: [{ role: 'user', content: 'Say this is a test' }],
+      model: 'gpt-3.5-turbo',
+    });
+  }
+
+  main();
+  // print('ChatGPT Reply:', reply)
 
 
   res.status(200).json({s:1})
