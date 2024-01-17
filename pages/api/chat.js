@@ -13,7 +13,7 @@ export default function handler(req, res) {
   stop=None,
   echo=True
 )
-
+console.log(response);
 reply = response.choices[0].text.strip()
 print('ChatGPT Reply:', reply)
 
