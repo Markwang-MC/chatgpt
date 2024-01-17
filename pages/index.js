@@ -9,6 +9,9 @@ export default function Index() {
   .then((res)=>{
     return res.data.chatCompletion
   })
+  .then((res)=>{
+    return res;
+  })
   .then((data)=>{
     console.log(data);
   })
