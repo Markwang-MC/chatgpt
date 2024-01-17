@@ -10,10 +10,8 @@ export default function handler(req, res) {
       model: 'gpt-3.5-turbo',
       stream: false
     });
-    console.log(chatCompletion);
-    res.status(200).json({s:chatCompletion,o:openai})
-    res.status(405).json({s:chatCompletion,o:openai})
 
+    res.status(200).json({chatCompletion})
   }
 
 }
