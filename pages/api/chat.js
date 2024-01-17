@@ -1,4 +1,4 @@
-import openai from 'openai';
+import OpenAI from 'openai';
 export default function handler(req, res) {
   if (req.method=="POST") {
     const openai = new OpenAI({
