@@ -3,24 +3,21 @@ export default function handler(req, res) {
   if (req.method=="POST") {
     console.log('req.body');
   }
-  var _text;
-  const generateText = async (prompt) => {
-    const response = await openai.Completion.create({
-      engine: 'text-davinci-003',
-      prompt: prompt,
-    });
 
-    return response.choices[0].text;
-  };
+  response = openai.Completion.create(
+  engine="davinci-codex",
+  prompt="What is the meaning of life?",
+  max_tokens=50,
+  temperature=0.7,
+  n=1,
+  stop=None,
+  echo=True
+)
 
-  generateText('Once upon a time').then(text => {
-    console.log({x:text});
-    _text=text
-  }).catch(error => {
-    console.error('Error:', error);
-  });
+reply = response.choices[0].text.strip()
+print('ChatGPT Reply:', reply)
 
 
-  res.status(200).json({'text':_text})
+  res.status(200).json({s:1})
   // res.end("")
 }
