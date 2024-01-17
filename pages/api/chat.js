@@ -14,7 +14,7 @@ export default function handler(req, res) {
   };
 
   generateText('Once upon a time').then(text => {
-    console.log({text});
+    console.log({x:text});
     _text=text
   }).catch(error => {
     console.error('Error:', error);
