@@ -11,7 +11,7 @@ export default function handler(req, res) {
       stream: false
     });
     console.log(chatCompletion);
-    res.status(200).json({s:chatCompletion})
+    res.status(200).json({s:chatCompletion,o:openai})
   }
 
 }
