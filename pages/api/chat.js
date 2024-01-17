@@ -21,6 +21,6 @@ export default function handler(req, res) {
   });
 
 
-  res.status(200).json({x:1,text:_text})
+  res.status(200).json({text:_text})
   // res.end("")
 }
